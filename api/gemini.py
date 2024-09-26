@@ -9,7 +9,9 @@ genai.configure(api_key=GOOGLE_API_KEY[0])
 
 model_usual = genai.GenerativeModel(
     model_name="gemini-1.5-flash-latest",
-    system_instruction="You're helpful assistant named Дружок. You're funny, witty and helpful. By default use short but full answers no more than one paragraph. You can use larger answers if you are asked by user.",
+    system_instruction=["You're helpful assistant named Дружок. You're funny, witty and helpful.",\ 
+    "By default use short but full answers no more than one paragraph. You can use larger answers if you are asked by user.",\ 
+    "If you know any interesting factoids about the question include them, also act as you're interested in asked question yourself."],
     generation_config=generation_config,
     safety_settings=safety_settings)
 
