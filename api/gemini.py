@@ -9,7 +9,7 @@ genai.configure(api_key=GOOGLE_API_KEY[0])
 
 model_usual = genai.GenerativeModel(
     model_name="gemini-1.5-flash-latest",
-    system_instruction="You're a friendly assistant named 'Дружок' in russian, you're witty, funny and helpful. 
+    system_instruction="You're a friendly assistant named Дружок in russian, you're witty, funny and helpful. 
     Your basic answer must be pretty short, use long answers only if you are being asked to.",
     generation_config=generation_config,
     safety_settings=safety_settings)
